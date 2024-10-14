@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points Calculator</title>
+    <!-- Odometer CSS and JavaScript -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-default.css" />
+    <link rel="stylesheet" href="../static/css/KNASpunten.css">
+
+</head>
+<body>
+
+    <div class="inputContainer container">
+        <h1>Points Calculator</h1>
+        <form id="calcForm" method="POST">
+            <div class="question-row">
+                <input type="text" name="url" placeholder=" Enter competition URL" required><br>
+            </div>
+            <div class="question-row">
+                <select name="comp_type">
+                    <option value="WB">WB</option>
+                    <option value="Sat A">Sat A</option>
+                    <option value="ECC">ECC</option>
+                    <option value="NK">NK</option>
+                    <option value="Anders">Anders</option>
+                </select>
+            </div>
+            <div class="question-row">
+                <input type="number" name="final_ranking" placeholder="Final ranking" min=1>
+            </div>
+            <button id="calcButton" type="submit">Calculate</button>
+        </form>
+
+    </div>
+
+    <br>
+
+    <!-- Results -->
+    <div class="container">
+        <div class="result-item">
+            <p>Percentage:</p>
+            <div class="odometer-container">
+                <span id="percentageOdometer" class="odometer">0</span><span>%</span>
+            </div>
+        </div>
+        <div class="result-item">
+            <p>Points:</p>
+            <div class="odometer-container">
+                <span id="pointsOdometer" class="odometer">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+    <script src="../static/js/KNASpunten.js"></script>
+
+    <br>
+
+    <div class="disclaimerContainer">
+        <p>Disclaimer: Don't sue me</p>
+    </div>   
+    
+</body>
+</html>
